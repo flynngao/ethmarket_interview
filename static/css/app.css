@@ -1,0 +1,26 @@
+table{
+    width:100%;
+}
+.mdl-layout__header-row{
+    background: rgb(96, 125, 139);
+    color: #fff
+}
+.mdl-card__title {
+    color: #fff;
+}
+.ask-title{
+    background:rgb(76, 175, 80);
+}
+.bid-title{
+    background:rgb(244, 67, 54);
+}
+.deal-title{
+    background:rgb(33, 150, 243);
+}
+
+.sample-show-hide {
+  transition: all linear 0.5s;
+}
+.sample-show-hide.ng-hide {
+  opacity: 0;
+}

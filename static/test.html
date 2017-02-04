@@ -1,0 +1,254 @@
+<html>
+  <head>
+    <!-- Material Design Lite -->
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Material Design Lite Demo</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div> 
+    
+  <main class="mdl-layout__content">
+    <div class="page-content">
+    <!-- Your content goes here -->
+  
+      <!-- Full Width Section 
+       <div class="top" style="background-color: lightgray; color: gray; padding: 30px; margin-bottom: 10px;">
+        <center>
+           <h3>Checkout the Grid Below!</h3>
+           <h5>Inside you'll find four cards</h5> 
+        </center>
+      </div> 
+
+      <!-- Top Card -->
+       <div class="mdl-grid">
+           
+   
+           <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-card mdl-shadow--2dp demo-card-wide" style="width:100%;">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Welcome to my demo</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    This is a work in progress. I'll continue to add on new components as I read through the MDL documentation.
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                      Get Started
+                    </a>
+                  </div>
+                  <div class="mdl-card__menu">
+                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                      <i class="material-icons">share</i>
+                    </button>
+                  </div>
+                </div>
+          </div>
+      </div>
+      
+    <!-- Start 4 Column Section -->
+    <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              
+              <div class="mdl-card__media">
+                <img src="http://www.cupcakeipsum.com/assets/happy_muffin.png" style="max-height:200px;">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Cupcake Ipsum</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">
+                Chocolate bar tiramisu ice cream cotton candy donut cookie toffee.
+                </span>
+              </div>   
+              
+              <div class="mdl-card__actions">
+              
+                <!-- Icon button link-->
+                <a href="http://www.cupcakeipsum.com/"class="mdl-button mdl-js-button mdl-button--icon">
+                  <i class="material-icons">link</i>
+                </a>
+                
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="https://baconipsum.com/wp-content/themes/baconipsum-custom-theme-v2/images/bacon-ipsum-banner1.jpg" style="max-height:200px;">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Bacon Ipsum</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Bacon ipsum dolor amet meatball venison swine pork belly.</span>
+              </div>
+              <div class="mdl-card__actions">
+                
+                <!-- Icon button link-->
+                <a href="https://baconipsum.com"class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">link</i>
+                </a>
+              
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="http://image.spreadshirtmedia.com/users/1398000/1397498/363429/img/363429_20110905115709.gif" style="max-height:200px;">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Zombie Ipsum</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Zombies reversus ab inferno, nam malum cerebro.</span>
+              </div>
+              <div class="mdl-card__actions">
+                
+                <!-- Icon button link-->
+                <a href="http://www.zombieipsum.com/"class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">link</i>
+                </a>
+                
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="http://gallery.mailchimp.com/52ff5a7b564a106c544c25c8d/images/Screen_Shot_2014_03_11_at_5.36.35_PM.png" style="max-height:200px;">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Hipster Ipsum</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Art party organic blog, narwhal Neutra raw denim migas.</span>
+              </div>
+              <div class="mdl-card__actions">
+                
+                <!-- Icon button link-->
+                <a href="http://hipsum.co/"class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">link</i>
+                </a>
+                
+              </div>
+            </div>
+          </div>
+    </div>
+    
+    <div>
+   
+      <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col">
+                <div class="docs-text-styling component-title">
+                  <h3>Default Slider</h3>
+                  <p>Selecting a value out of a range.</p>
+
+                  <!-- Default Slider -->
+                  <input class="mdl-slider mdl-js-slider" type="range"
+                    min="0" max="100" value="0" tabindex="0"/>
+                </div>
+            </div>     <div class="mdl-cell mdl-cell--6-col">
+                <div class="docs-text-styling component-title">
+                  <h3>Starting Value Slider</h3>
+                  <p>Selecting a value out of a range.</p>
+
+                  <!-- Slider with Starting Value -->
+                  <input class="mdl-slider mdl-js-slider" type="range"
+                    min="0" max="100" value="25" tabindex="0"/>
+                </div>
+            </div>
+      </div>
+      
+     
+
+      
+    <!-- Icons with Badges -->
+    <div style="padding:25px;">
+      <center>
+          
+          <p>Here are some icons with badges!</p>
+       
+            <!-- Number badge on icon -->
+            <div class="icon material-icons mdl-badge closer" data-badge="1">account_box</div>
+            <!-- Icon badge on icon -->
+            <div class="icon material-icons mdl-badge closer" data-badge="♥">account_box</div>
+        
+          <br><br>  
+          <p>Check out some tool tips!</p>
+          <!-- Simple Tooltip -->
+          <div id="tt1" class="icon material-icons">add</div>
+          <div class="mdl-tooltip" for="tt1">
+          Follow
+          </div>
+          
+          &nbsp;&nbsp;
+
+          <!-- Large Tooltip -->
+          <div id="tt2" class="icon material-icons">print</div>
+          <div class="mdl-tooltip mdl-tooltip--large" for="tt2">
+          Print
+          </div>
+        
+        &nbsp;&nbsp;
+
+        <!-- Rich Tooltip -->
+          <div id="tt3" class="icon material-icons">cloud_upload</div>
+          <div class="mdl-tooltip" for="tt3">
+          Upload <strong>file.zip</strong>
+          </div>
+        
+          &nbsp;&nbsp;
+
+          <!-- Multiline Tooltip -->
+          <div id="tt4" class="icon material-icons">share</div>
+          <div class="mdl-tooltip" for="tt4">
+          Share your content<br>via social media
+          </div>
+        <br>
+      </center>
+    </div>
+    
+      
+    <!-- Begin Footer -->
+    <footer class="demo-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Privacy and Terms</a></li>
+              <li><a href="#">User Agreement</a></li>
+            </ul>
+          </div>
+    </footer>
+    <!-- End Footer -->
+    
+  </main>
+</div>
+    
+    
+  </body>
+</html>

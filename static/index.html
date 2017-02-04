@@ -1,27 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Order List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="css/app.css">
   </head>
 
-  <body>
-    <h1>Order List</h1>
+  <body ng-app='myApp' ng-controller="AppController">
 
-    <table id="order-list">
-      <tr> <th>Number</th> <th>Side</th> <th>Quantity</th> <th>Price</th> </tr>
-      <tbody>
-        <tr v-for="order in orders">
-          <td>{{ order.number }}</td>
-          <td>{{ order.side }}</td>
-          <td>{{ order.quantity }}</td>
-          <td>{{ order.price }}</td>
-        </tr>
-      </tbody>
-    </table>
 
-    <!--------------------------------- Scripts ------------------------------------------>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/vue.min.js"></script>
-    <script src="orders.js"></script>
+
+    <div layout="row"  class="mdl-layout__header-row">
+      <span class='mdl-layout-title'>Interview Trade Demo</h1>
+    </div>
+
+    <div class="mdl-grid">
+       <div class="mdl-card mdl-cell mdl-cell--6-col">
+         <div class="mdl-card__title ask-title">
+            <h2 class="mdl-card__title-text">Ask List</h2>
+         </div>
+         <table class="mdl-data-table mdl-js-data-table">
+           <thead>
+             <tr>
+               <th>单号</th>
+               <th>价格</th>
+               <th>数量</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr ng-repeat="item in ask" ng-if="$index < 20" ng-click="null">
+               <td>{{item.number}}</td>
+               <td>{{item.price}}</td>
+               <td>{{item.quantity}}</td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+
+
+      <div class="mdl-card mdl-cell mdl-cell--6-col">
+         <div class="mdl-card__title bid-title">
+            <h2 class="mdl-card__title-text">Bid List</h2>
+         </div>
+         <table class="mdl-data-table mdl-js-data-table">
+           <thead>
+             <tr>
+               <th>单号</th>
+               <th>价格</th>
+               <th>数量</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr ng-repeat="item in bid" ng-if="$index < 20" ng-click="null">
+               <td>{{item.number}}</td>
+               <td>{{item.price}}</td>
+               <td>{{item.quantity}}</td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+    </div>
+
+    
+
+    <div class="mdl-grid">
+        <div class="mdl-card mdl-cell mdl-cell--12-col">
+         <div class="mdl-card__title deal-title">
+            <h2 class="mdl-card__title-text">Deal List</h2>
+         </div>
+         <table class="mdl-data-table mdl-js-data-table">
+           <thead>
+             <tr>
+               <th>单号</th>
+               <th>价格</th>
+               <th>数量</th>
+               
+             </tr>
+           </thead>
+           <tbody>
+              <tr ng-repeat="item in deal" ng-if="$index < 20" ng-click="showDetail($index)">
+                <td>{{item.number}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.quantity}}</td>
+               
+              </tr>
+              <!-- <tr class="content-area sample-show-hide" ng-show="showDetailNum === $index"> -->
+                <!-- {{item.ask}} -->
+                <!-- {{item.bid}} -->
+              <!-- </tr> -->
+           </tbody>
+         </table>
+       </div>
+      
+    </div>
+
+
+    <dialog class="">
+    <h5 class="mdl-dialog__title">订单详情</h5>
+    <div class="mdl-dialog__content">
+      <table class="mdl-data-table mdl-js-data-table">
+           <thead>
+             <tr>
+               
+               <th>交易时间</th>
+               <th>买单号</th>
+               <th>买单价格</th>
+               <th>买单数量</th>
+               <th>卖单号</th>
+               <th>卖单价格</th>
+               <th>卖单数量</th>
+             </tr>
+           </thead>
+           <tbody>
+              <tr>
+                <td>{{current.date | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                <td>{{current.ask.number}}</td>
+                <td>{{current.ask.price}}</td>
+                <td>{{current.ask.quantity}}</td>
+                <td>{{current.bid.number}}</td>
+                <td>{{current.bid.price}}</td>
+                <td>{{current.bid.quantity}}</td>
+              </tr>
+              <!-- <tr class="content-area sample-show-hide" ng-show="showDetailNum === $index"> -->
+                <!-- {{item.ask}} -->
+                <!-- {{item.bid}} -->
+              <!-- </tr> -->
+           </tbody>
+         </table>
+    </div>
+    <div class="mdl-dialog__actions">
+      <!-- <button type="button" class="mdl-button">Agree</button> -->
+      <button type="button" class="mdl-button close" ng-click="closeDialog()">Ok</button>
+    </div>
+    </dialog>
+    <script src="/js/app.js" type="text/javascript"></script>
+
   </body>
 </html>
