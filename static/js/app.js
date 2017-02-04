@@ -25,7 +25,7 @@ function AppController($scope, $http, $mdDialog) {
   function sepOrders(res) {
     var data = res.data
     for (var i = 0; i < data.length; i++) {
-      if (self.orderList.indexOf(data[i].number) !== -1) {
+      if (self.orderList.indexOf(data[i].number) !== -1 && data[i].quantity !== 0) {
         continue
       }
       if (data[i].side === 'ask') {
